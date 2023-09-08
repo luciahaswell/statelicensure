@@ -18,7 +18,7 @@ svg{
   margin: 3rem;
   width: 50%;
   height: auto;
-  padding: 3rem 3rem 1rem;
+  padding: 2rem 3rem 1rem;
 }
 
 .stateInfo{
@@ -57,8 +57,14 @@ span{
   background-color: #65806D;
 }
 
-.legend{
-  
+.closeButton{
+  padding-right: 5%;
+  background-color: #65806D;
+  cursor: pointer;
+}
+
+.closeButton:hover{
+  color: darkgray;
 }
 
 .licensure{
@@ -131,6 +137,7 @@ span{
   .licensureInfo{
     font-size: 1.5rem;
   }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -148,5 +155,10 @@ span{
 
   .licensureInfo{
     width: 100%;
+  }
+
+  .closeButton{
+    position:absolute;
+    right: 0;
   }
 }

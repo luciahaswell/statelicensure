@@ -19,6 +19,10 @@ const Map = () => {
         setIsHovering(true);
     };
 
+    const closeStateInfo = () =>{
+        setIsHovering(false);
+    }
+
 
 
 
@@ -147,7 +151,9 @@ const Map = () => {
                             <span >{hoveredState.Compact}</span>
                         </div>
                     </div>
-                </div>}
+                    <h1 className="closeButton" onClick={closeStateInfo}>x</h1>
+                </div>
+                }
         </>
     );
 };
