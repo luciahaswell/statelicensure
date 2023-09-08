@@ -1,38 +1,134 @@
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: #C8CBC0;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.map{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+svg{
+  margin: 3rem;
+  width: 50%;
+  height: auto;
+  padding: 3rem 3rem 1rem;
+}
+
+.stateInfo{
+  display: inline-flex;
+  background-color: #65806D;
+  width: 100%;
+  font-family: 'Lalezar', cursive;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.stateName{
+  width: 33%;
+  color: #072F38;
+  font-size: 4.2rem;
+  background-color: #65806D;
+}
+
+.flex{
+  background-color: #65806D;
+}
+
+.licensureInfo{
+  width: 67%;
+  color: white;
+  font-size: 2rem;
+  background-color: #65806D;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+span{
+  margin: 0;
+  background-color: #65806D;
+}
+
+.legend{
+  
+}
+
+.licensure{
+  font-family: 'Lalezar', cursive;
   color: white;
+  height: 2rem;
+  width: 8rem;
+  margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.licensure > h3 {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.none{
+  background-color: #C8CBC0;
+}
+
+.licensure.quick, .quick > h3{
+  background-color: #BD7423;
+}
+
+.licensure.walkthrough, .walkthrough > h3{
+  background-color: #65806D;
+}
+
+.licensure.partial, .partial > h3{
+  background-color: #072F38;
+}
+
+.licensure.awaiting, .awaiting > h3{
+  background-color: #334E3B;
+}
+
+.licensure.compact, .compact > h3{
+  background-color: #C8CBC0;
+}
+
+.licensure.compact{
+  border: 1px solid white;
+}
+
+.licensure.notcompact, .notcompact > h3{
+  background-color: #C8CBC0;
+}
+
+.licensure.notcompact{
+  border: 1px solid #333332;
+}
+
+@media screen and (max-width: 950px) {
+  .legend{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  svg{
+    width: 80%;
+    height: auto;
+  }
+  
+  .map{
+    flex-direction: column;
+    
+  }
+
+  .stateName{
+    font-size: 3rem;
+  }
+
+  .licensureInfo{
+    font-size: 1.5rem;
   }
 }
