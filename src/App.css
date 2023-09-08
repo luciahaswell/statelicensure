@@ -132,3 +132,21 @@ span{
     font-size: 1.5rem;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .stateInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+  }
+
+  .stateName{
+    margin: 0;
+    width: 100%;
+  }
+
+  .licensureInfo{
+    width: 100%;
+  }
+}
